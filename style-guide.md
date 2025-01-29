@@ -13,12 +13,12 @@ The designs were created to the following widths:
 
 - White: hsl(0, 0%, 100%)
 
-- Stone 100: hsl(30, 54%, 90%)
-- Stone 150: hsl(30, 18%, 87%)
-- Stone 600: hsl(30, 10%, 34%)
+- Stone 100: hsl(30, 54%, 90%) background
+- Stone 150: hsl(30, 18%, 87%) time box
+- Stone 600: hsl(30, 10%, 34%) paragraph
 - Stone 900: hsl(24, 5%, 18%)
 
-- Brown 800: hsl(14, 45%, 36%)
+- Brown 800: hsl(14, 45%, 36%) head text
 
 - Rose 800: hsl(332, 51%, 32%)
 - Rose 50: hsl(330, 100%, 98%)
