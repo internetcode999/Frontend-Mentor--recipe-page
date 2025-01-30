@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(1, 600px);
+    place-content: center;
+
+    background-color: hsl(30, 54%, 90%);
+    font-family: outfit, sans-serif;
+    padding: 16px;
+    padding-block-start: 70px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+    background-color: white;
+    padding: 27px;
+    border-radius: 30px;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: "young serif", "sans serif";
+    color: hsl(24, 5%, 18%);
+}
+
+.recipe-heading_content {
+    margin-block-end: 15px;
+    color: hsl(30, 10%, 34%);
+}
+
+article {
+    display: grid;
+    gap: 1rem;
+    color: hsl(30, 10%, 34%);
+}
+
+:is(ul, ol) li::marker{
+    color: hsl(14, 45%, 36%);
+}
+
+article :is(h2) {
+    font-family: "young serif", sans-serif;
+    color: hsl(14, 45%, 36%);
+}
+
+span {
+    font-weight: 700;
+}
+
+#time {
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 20px;
+    padding: 18px;
+    line-height: 1.8;
+}
+
+#time ul {
+    padding-left: 17px;
+}
+
+#time > p {
+    font-size: 22px;
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+}
+
+#ingredients {
+    line-height: 1.8;
+}
+
+#ingredients h2 {
+    line-height: 2;
+}
+
+#instructions h2 {
+    margin-block-end: 12px;
+}
+
+#instructions ol {
+    list-style-position: outside;
+    counter-reset: list-counter;
+    list-style-type: none;
+}
+
+#instructions ol li::before {
+    position: absolute;
+    left: 0;
+
+    content: counter(list-counter) '.';
+    counter-increment: list-counter;
+    font-weight: 800;
+    margin-right: 20px;
+    color: hsl(14, 45%, 36%);
+}
+
+#instructions ol li {
+    position: relative;
+
+    margin-block-end: 10px;
+    line-height: 1.3;
+    padding-left: 27px;
+}
+
+#nutrients h2 {
+    margin-bottom: 12px;
+}
+
+#nutrients p {
+    margin-bottom: 12px;
+}
+
+#nutrients table {
+    text-align: left;
+    padding-left: 25px;
+    border-collapse: collapse;
+}
+
+#nutrients th, td {
+    padding: 8px;
+    border-bottom: 1px solid hsl(30, 10%, 34%);
+}
+
+#nutrients tr:last-child th,
+#nutrients tr:last-child td {
+    border: 0px;
+}
+
+#nutrients th {
+    padding-left: 40px;
+}
+
+#nutrients td {
+    padding-left: 180px;
+    color: hsl(14, 45%, 36%);
+}
+
+#nutrients table th {
+    font-weight: normal;
+}
+
+table td {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        display: grid;
+        grid-template-columns: 320px;
+
+        padding: 16px;
+        background-color: hsl(30, 54%, 90%);
+    }
+
+    #nutrients table :is(td, th) {
+        padding-left: min(40px);
+    }
+}
